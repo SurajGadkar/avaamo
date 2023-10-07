@@ -31,13 +31,13 @@ fs.readFile("input_data.json", "utf8", (err, data) => {
     // Sort the filtered data by alphabtical order
     filteredData.sort(alphabticalSort);
 
-    // Update the input data with the modified data
+    // Updated data to be written to the file
     const updatedData = {
       averageAge,
       filteredData,
     };
 
-    // Write the updated data back to the input JSON file
+    // Write the updated data to output_data.json file
     fs.writeFile(
       "output_data.json",
       JSON.stringify(updatedData, null, 2),
